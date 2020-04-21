@@ -1,4 +1,4 @@
-# Trigger Word Detection
+# 1. Trigger Word Detection
 
 Trigger word detection is the technology that allows devices like Amazon Alexa, Google Home, Apple Siri, and Baidu DuerOS to wake up upon hearing a certain word.
 For this exercise, our trigger word will be "Activate." Every time it hears you say "activate," it will make a "chiming" sound.
@@ -22,7 +22,7 @@ A spectrogram is computed by sliding a window over the raw audio signal, and cal
 If you don't understand the previous sentence, don't worry about it.
 
 
-# Neural Machine Translation
+# 2. Neural Machine Translation
 
 ## Translating human readable dates into machine readable dates
 The model you will build here could be used to translate from one language to another, such as translating from English to Hindi. However, language translation requires massive datasets and usually takes days of training on GPUs. To give you a place to experiment with these models even without using massive datasets, we will instead use a simpler "date translation" task.
