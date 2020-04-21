@@ -40,3 +40,11 @@ We use  a⟨t⟩=[a→⟨t⟩;a←⟨t⟩]  to represent the concatenation of th
 
 The diagram on the right uses a RepeatVector node to copy  s⟨t−1⟩ 's value  Tx  times, and then Concatenation to concatenate  s⟨t−1⟩  and  a⟨t⟩  to compute  e⟨t,t′ , which is then passed through a softmax to compute  α⟨t,t′⟩ . We'll explain how to use RepeatVector and Concatenation in Keras below.
 
+# 3. Emojify!
+
+"Congratulations on the promotion! Lets get coffee and talk. Love you!" the emojifier can automatically turn this into "Congratulations on the promotion! 👍 Lets get coffee and talk. ☕️ Love you! ❤️"
+
+We have implement a model which inputs a sentence (such as "Let's go see the baseball game tonight!") and finds the most appropriate emoji to be used with this sentence (⚾️). In many emoji interfaces, you need to remember that ❤️ is the "heart" symbol rather than the "love" symbol. But using word vectors, you'll see that even if your training set explicitly relates only a few words to a particular emoji, our algorithm will be able to generalize and associate words in the test set to the same emoji even if those words don't even appear in the training set. This allows us to build an accurate classifier mapping from sentences to emojis, even using a small training set.
+
+I have started with a baseline model (Emojifier-V1) using word embeddings, then build a more sophisticated model (Emojifier-V2) that further incorporates an LSTM.
+
